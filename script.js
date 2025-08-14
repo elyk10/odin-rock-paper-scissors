@@ -3,7 +3,6 @@ console.log("Hello world");
 function getComputerChoice(choice)
 {
     var randomNum = random(3);
-    randomNum = choice
     var selection;
 
     if (randomNum < 1)
@@ -18,7 +17,7 @@ function getComputerChoice(choice)
 
 function random(range)
 {
-    return Math.random * range;
+    return Math.random() * range;
 }
 
 console.log(getComputerChoice(0));
