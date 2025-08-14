@@ -1,5 +1,8 @@
 console.log("Hello world");
 
+var humanScore = 0;
+var computerScore = 0;
+
 function getComputerChoice()
 {
     var randomNum = random(3);
