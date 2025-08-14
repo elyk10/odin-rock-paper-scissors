@@ -1,6 +1,6 @@
 console.log("Hello world");
 
-function getComputerChoice(choice)
+function getComputerChoice()
 {
     var randomNum = random(3);
     var selection;
@@ -20,6 +20,14 @@ function random(range)
     return Math.random() * range;
 }
 
-console.log(getComputerChoice(0));
-console.log(getComputerChoice(1));
-console.log(getComputerChoice(2));
+function getHumanChoice()
+{
+    return prompt("Please select an option:", "rock, paper, or scissors");
+}
+
+console.log(getComputerChoice());
+console.log(getComputerChoice());
+console.log(getComputerChoice());
+
+console.log(getHumanChoice());
+console.log(getHumanChoice());
