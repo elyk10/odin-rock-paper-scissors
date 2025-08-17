@@ -81,7 +81,7 @@ function playGame()
             console.log("Input error");
     }
 
-    for (var i = 0; i < 5; i++)
+    for (var i = 0; i < 100; i++)
     {
         playRound(getHumanChoice(), getComputerChoice());
     }
@@ -90,14 +90,24 @@ function playGame()
     console.log("The computers score was: " + computerScore);
 }
 
-/*console.log(getComputerChoice());
-console.log(getComputerChoice());
-console.log(getComputerChoice());
 
-console.log(getHumanChoice());
-console.log(getHumanChoice());
+document.addEventListener("DOMContentLoaded", () => {
 
-playRound(getHumanChoice(), getComputerChoice());
-*/
+    let options = document.querySelector("#options");
 
-playGame();
+    options.addEventListener("click", (event) => {
+        let target = event.target;
+
+        switch(target.id) {
+            case "rock":
+                console.log("Rock");
+                break;
+            case "paper":
+                console.log("Paper");
+                break;
+            case "scissors":
+                console.log("Scissors");
+                break;
+        }
+    });
+});
