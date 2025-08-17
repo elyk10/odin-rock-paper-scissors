@@ -33,6 +33,7 @@ function playRound(humanChoice, computerChoice)
         humanChoice = humanChoice.toLowerCase();
 
         const results = document.querySelector(".results");
+        const score = document.querySelector(".score");
 
         if (humanChoice == "rock" && computerChoice == "rock")
         {
@@ -87,6 +88,21 @@ function playRound(humanChoice, computerChoice)
         }
         else
             console.log("Input error");
+
+        
+        
+        if (humanScore == 5)
+        {
+            score.textContent = "You Win! \nYou: " + humanScore + " Computer: " + computerScore;
+        }
+        else if (computerScore == 5)
+        {
+            score.textContent = "Computer Wins! \nYou: " + humanScore + " Computer: " + computerScore;
+        }
+        else
+        {
+            score.textContent = "You: " + humanScore + " Computer: " + computerScore;
+        }
     }
 
 function playGame()
